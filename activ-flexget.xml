@@ -1,32 +1,22 @@
-<?xml version="1.0"?>
-<Container version="2">
-  <Name>activ-flexget</Name>
-  <Repository>activ/arch-flexget</Repository>
-  <Registry>https://registry.hub.docker.com/u/activ/arch-flexget/</Registry>
-  <Network>bridge</Network>
-  <MyIP/>
-  <Privileged>false</Privileged>
-  <Support>http://lime-technology.com/forum/index.php?topic=49545.0</Support>
-  <Project/>
-  <Overview>&#xD;
-  FlexGet is a multipurpose automation tool for content like torrents, nzbs, podcasts, comics, series, movies, etc. It can use different kinds of sources like RSS-feeds, html pages, csv files, search engines and there are even plugins for sites that do not provide any kind of useful feeds. [br]&#xD;
- 	The default port used is 3539 for the web interface. [br]&#xD;
-  </Overview>
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
   <Category>Downloaders:</Category>
-  <WebUI>http://[IP]:[PORT:3539]/</WebUI>
-  <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/mrporcles/unraid-docker-templates/master/icons/flexget-icon.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <DateInstalled>1524669628</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <DonateImg/>
-  <MinVer/>
-  <Description>&#xD;
-  FlexGet is a multipurpose automation tool for content like torrents, nzbs, podcasts, comics, series, movies, etc. It can use different kinds of sources like RSS-feeds, html pages, csv files, search engines and there are even plugins for sites that do not provide any kind of useful feeds. [br]&#xD;
+  <Name>activ-flexget</Name>
+  <Description>
+    FlexGet is a multipurpose automation tool for content like torrents, nzbs, podcasts, comics, series, movies, etc. It can use different kinds of sources like RSS-feeds, html pages, csv files, search engines and there are even plugins for sites that do not provide any kind of useful feeds. [br]&#xD;
  	The default port used is 3539 for the web interface. [br]&#xD;
   </Description>
+  <Overview>
+    FlexGet is a multipurpose automation tool for content like torrents, nzbs, podcasts, comics, series, movies, etc. It can use different kinds of sources like RSS-feeds, html pages, csv files, search engines and there are even plugins for sites that do not provide any kind of useful feeds. [br]&#xD;
+ 	The default port used is 3539 for the web interface. [br]&#xD;
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=49545.0</Support>
+  <Registry>https://registry.hub.docker.com/u/activ/arch-flexget/</Registry>
+  <GitHub>https://github.com/activ/arch-flexget</GitHub>
+  <Repository>activ/arch-flexget</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -37,17 +27,6 @@
       </Port>
     </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <ContainerDir>/mnt</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/activ-flexget</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <Environment>
     <Variable>
       <Value>false</Value>
@@ -69,11 +48,18 @@
       <Mode/>
     </Variable>
   </Environment>
-  <Config Name="Host Port 1" Target="3539" Default="3539" Mode="tcp" Description="Container Port: 3539" Type="Port" Display="always" Required="true" Mask="false">3539</Config>
-  <Config Name="Host Path 2" Target="/mnt" Default="Path to data" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Key 1" Target="DEBUG" Default="false" Mode="" Description="Container Variable: DEBUG" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="Key 4" Target="WEB_PASSWD" Default="fl3xg3t!" Mode="" Description="Container Variable: WEB_PASSWD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/activ-flexget" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/activ-flexget</Config>
+  <Data>
+    <Volume>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/activ-flexget</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3539]/</WebUI>
+  <Banner>https://about.gitlab.com/images/wordmark_inverted_small.png</Banner>
+  <Icon>https://raw.githubusercontent.com/mrporcles/unraid-docker-templates/master/icons/flexget-icon.png</Icon>
 </Container>
